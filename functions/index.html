@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Cars to consider in 2026</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <h1>AutoVision</h1>
+        </div>
+        <div id="navbar-toggler" class="open">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#tesla">Tesla Model S</a></li>
+                <li><a href="#lucid">Lucid Air</a></li>
+                <li><a href="#rivian">Rivian R1T</a></li>
+                <li><a href="#ford">Ford Mustang Mach-E</a></li>
+                <li><a href="#porsche">Porsche Taycan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- <ul>
+        <li><strong>Tesla Model S Plaid:</strong> Known for its incredible acceleration and long-range
+            capabilities, the Model S Plaid is a top choice for electric car enthusiasts.</li>
+        <li><strong>Lucid Air:</strong> With its luxurious design and impressive range, the Lucid Air is a
+            strong contender in the electric vehicle market.</li>
+        <li><strong>Rivian R1T:</strong> This electric pickup truck offers off-road capabilities and a unique
+            design, making it a great option for adventure seekers.</li>
+        <li><strong>Ford Mustang Mach-E:</strong> Combining the iconic Mustang name with electric power, the
+            Mach-E offers a sporty driving experience and modern features.</li>
+        <li><strong>Porsche Taycan:</strong> For those seeking a high-performance electric sports car, the
+            Taycan delivers exceptional handling and speed.</li>
+    </ul> -->
+
+    <main>
+        <h1>Cars to consider in 2026</h1>
+        <section class="slideshow-section">
+            <div class="slide active" id="slide-1">
+                <h2>Ford Mustang Mach-E</h2>
+                <img src="images/ford-mustang-mach-e.jpg">
+            </div>
+            <div class="slide" id="slide-2">
+                <h2>Rivian R1T</h2>
+                <img src="images/rivian-r1t.jpg">
+            </div>
+            <div class="slide" id="slide-3" active>
+                <h2>Lucid Air</h2>
+                <img src="images/lucid-air.jpg">
+            </div>
+            <div class="slide" id="slide-4">
+                <h2>Tesla Model S</h2>
+                <img src="images/tesla-model-s.jpg">
+            </div>
+            <div class="slide" id="slide-5">
+                <h2>Porsche Taycan</h2>
+                <img src="images/porsche-taycan.jpg">
+            </div>
+            <div class="slide-select-buttons">
+                <button class="slide-select-button active" id="select-btn-1" onclick="activateSlide(1)"></button>
+                <button class="slide-select-button" id="select-btn-2" onclick="activateSlide(2)"></button>
+                <button class="slide-select-button" id="select-btn-3" onclick="activateSlide(3)"></button>
+                <button class="slide-select-button" id="select-btn-4" onclick="activateSlide(4)"></button>
+                <button class="slide-select-button" id="select-btn-5" onclick="activateSlide(5)"></button>
+            </div>
+        </section>
+        <section id=" tesla">
+            <h2>Tesla Model S Plaid</h2>
+            <div class="car-content">
+                <div>
+                    <p>Known for its incredible acceleration and long-range capabilities, the Model S Plaid is a
+                        top
+                        choice
+                        for
+                        electric car enthusiasts.</p>
+                    <ul>
+                        <li>Range: Up to 390 miles on a single charge</li>
+                        <li>Performance: 0-60 mph in under 2 seconds</li>
+                        <li>Autopilot: Advanced driver-assistance features for enhanced safety and convenience
+                        </li>
+                    </ul>
+                </div>
+
+                <img src="images/tesla-model-s.jpg" alt="Tesla Model S Plaid" class="car-image">
+            </div>
+        </section>
+        <section id="lucid">
+            <h2>Lucid Air</h2>
+            <div class="car-content">
+                <div>
+                    <p>With its luxurious design and impressive range, the Lucid Air is a strong contender in the
+                        electric
+                        vehicle market.</p>
+                    <ul>
+                        <li>Range: Up to 520 miles on a single charge</li>
+                        <li>Performance: 0-60 mph in approximately 2.5 seconds</li>
+                        <li>Interior: Spacious and luxurious with advanced technology features</li>
+                    </ul>
+                </div>
+                <img src="images/lucid-air.jpg" alt="Lucid Air" class="car-image">
+            </div>
+        </section>
+        <section id="rivian">
+            <h2>Rivian R1T</h2>
+            <div class="car-content">
+                <div>
+                    <p>This electric pickup truck offers off-road capabilities and a unique design, making it a great
+                        option for adventure seekers.</p>
+                    <ul>
+                        <li>Range: Up to 314 miles on a single charge</li>
+                        <li>Performance: 0-60 mph in approximately 3 seconds</li>
+                        <li>Off-road capabilities: Equipped with adjustable air suspension and all-wheel drive</li>
+                    </ul>
+                </div>
+
+                <img src="images/rivian-r1t.jpg" alt="Rivian R1T" class="car-image">
+            </div>
+        </section>
+        <section id="ford">
+            <h2>Ford Mustang Mach-E</h2>
+            <div class="car-content">
+                <div>
+                    <p>Combining the iconic Mustang name with electric power, the Mach-E offers a sporty driving
+                        experience
+                        and
+                        modern features.</p>
+                    <ul>
+                        <li>Range: Up to 305 miles on a single charge</li>
+                        <li>Performance: 0-60 mph in approximately 3.5 seconds (GT version)</li>
+                        <li>Design: Sleek and
+                            modern with a spacious interior and advanced infotainment system</li>
+                    </ul>
+                </div>
+
+                <img src="images/ford-mustang-mach-e.jpg" alt="Ford Mustang Mach-E" class="car-image">
+            </div>
+        </section>
+        <section id="porsche">
+            <h2>Porsche Taycan</h2>
+            <div class="car-content">
+                <div>
+                    <p>For those seeking a high-performance electric sports car, the Taycan delivers exceptional
+                        handling
+                        and
+                        speed.</p>
+                    <ul>
+                        <li>Range: Up to 227 miles on a single charge (Taycan Turbo S)</li>
+                        <li>Performance: 0-60 mph in approximately 2.4 seconds (Taycan Turbo S)</li>
+                        <li>Design: Sleek and sporty with a luxurious interior and advanced technology features</li>
+                    </ul>
+                </div>
+                <img src="images/porsche-taycan.jpg" alt="Porsche Taycan" class="car-image">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AutoVision. All rights reserved.</p>
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

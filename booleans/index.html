@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Ending</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            max-width: 700px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            line-height: 1.5;
+        }
+
+        form {
+            display: grid;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: grid;
+            gap: 0.3rem;
+        }
+
+        button {
+            width: fit-content;
+            padding: 0.5rem 0.9rem;
+            cursor: pointer;
+        }
+
+        #storyOutput {
+            background: #f3f3f3;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Night Out Story</h1>
+    <p>Fill this in to see how the night ends.</p>
+
+    <form id="storyForm">
+        <label for="name">
+            Name
+            <input type="text" id="name" name="name" placeholder="Alex" required>
+        </label>
+
+        <label for="age">
+            Age
+            <input type="number" id="age" name="age" min="1" max="120" required>
+        </label>
+
+        <label>
+            <input type="checkbox" id="hasId" name="hasId">
+            Has ID tonight
+        </label>
+
+        <label>
+            <input type="checkbox" id="wantsDrink" name="wantsDrink">
+            Wants to order a drink
+        </label>
+
+        <button type="submit">Generate Story</button>
+    </form>
+
+    <div id="storyOutput">Your ending will appear here.</div>
+</body>
+
+<script>
+    const storyForm = document.getElementById("storyForm");
+    const storyOutput = document.getElementById("storyOutput");
+
+    storyForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim() || "Someone";
+        const age = Number(document.getElementById("age").value);
+        const hasId = document.getElementById("hasId").checked;
+        const wantsDrink = document.getElementById("wantsDrink").checked;
+
+        const canEnterClub = age >= 21 && hasId;
+        let story = "";
+
+        if (canEnterClub) {
+            story = `${name} reached the club door, showed ID, and got in.`;
+            if (wantsDrink) {
+                story += ` At the bar, ${name} ordered a cold drink and enjoyed the music.`;
+            } else {
+                story += ` ${name} skipped the bar, danced a little, and headed home happy.`;
+            }
+        } else {
+            story = `${name} tried to get into the club, but it did not work out.`;
+            story += ` So ${name} went to the movies instead, got popcorn, and had a great night anyway.`;
+        }
+
+        storyOutput.textContent = story;
+    });
+</script>
+
+</html>

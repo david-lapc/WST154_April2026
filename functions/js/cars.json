@@ -1,0 +1,23 @@
+[
+    {
+        "make": "Porche",
+        "model": "911",
+        "year": 2020,
+        "color": "red",
+        "description": "A sports car"
+    },
+    {
+        "make": "Tesla",
+        "model": "Model S",
+        "year": 2021,
+        "color": "black",
+        "description": "An electric car with a long range and advanced technology."
+    },
+    {
+        "make": "Ford",
+        "model": "Mustang",
+        "year": 2019,
+        "color": "blue",
+        "description": "A classic American muscle car with a powerful engine and aggressive styling."
+    }
+]
